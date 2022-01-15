@@ -6,7 +6,7 @@ This is at a very simple stage and may have a lot of flaws please if you find an
 Steps to run this --
 
 install the requirements mentioned in requirement.txt
-this app uses microsodt sql server
+this app uses microsoft sql server
 so you may change the settings as per your requirements and sql engines
 
 and most importantly!
