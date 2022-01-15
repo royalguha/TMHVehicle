@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block content %}
+<style>
+    .bkg{
+        background-color: white;
+        border-radius: 22px;
+        padding: 12px;
+        opacity: 0.9;
+        
+        
+    }
+</style>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 bkg bg-dark">
+            <button class="btn btn-warning">Welcome {{user.first_name}}</button>
+    
+    
+            <a href="{% url 'index' %}" class="btn btn-warning">Home</a>
+        
+        
+            <a href="{% url 'logout' %}" class="btn btn-danger">Logout</a>
+
+        </div>
+        
+    </div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 offset-md-4 bkg">
+            <form action="" method="POST">
+                {% csrf_token %}
+                {{form|crispy}}
+
+                <input type="submit" class="btn btn-primary">
+            </form>
+            
+        </div>
+    </div>
+</div>
+
+{% endblock %}
